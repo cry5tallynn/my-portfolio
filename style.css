@@ -1,0 +1,32 @@
+/* This sets the background and the font */
+body {
+    background-color: #1a1a1a; /* Dark black/gray background */
+    color: #ffffff;            /* White text so you can read it */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* This styles the box holding your content */
+.container {
+    text-align: center;
+    border: 1px solid #333;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: #252525;
+}
+
+/* This makes your links look nice and bright */
+nav a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
