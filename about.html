@@ -5,40 +5,57 @@
     <title>About Me | Crystal L Voss</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* This centers the content and limits the text width */
+        /* The "Typewriter" Animation */
+        .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typewriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto 20px auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .10em; 
+            width: fit-content;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #007bff; }
+        }
+
+        /* Centering and Condensing the Bio */
         .about-content {
-            max-width: 700px; /* Limits the horizontal stretch */
-            margin: 0 auto;   /* Centers the block */
+            max-width: 650px; /* Narrower for better readability */
+            margin: 0 auto;   
             text-align: center;
             padding: 40px 20px;
-            animation: fadeIn 1.5s ease-in-out; /* Subtle entry animation */
+            line-height: 1.6; /* Adds breathing room between lines */
         }
 
-        /* Subtle Fade-in Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Dynamic Image Hover */
         .profile-img {
             width: 200px; 
-            border-radius: 15px; 
-            margin-bottom: 20px;
-            transition: transform 0.3s ease; /* Smooth movement */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-radius: 50%; /* Changed to a circle for a dynamic look */
+            margin-bottom: 25px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .profile-img:hover {
-            transform: scale(1.05); /* Subtle grow effect */
+            transform: scale(1.1) rotate(2deg); /* Adds a little tilt on hover */
         }
 
-        /* Nav styling for clarity */
         nav a {
             text-decoration: none;
             color: #007bff;
             margin: 0 10px;
-            font-weight: bold;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -53,7 +70,9 @@
         </nav>
 
         <div class="about-content">
-            <h1>About Me</h1>
+            <div class="typewriter">
+                <h1>Crystal L Voss</h1>
+            </div>
             
             <img src="profile.jpg" alt="Crystal L Voss" class="profile-img">
 
@@ -61,9 +80,5 @@
             
             <p>Expertise in human resources, payroll, event coordination, and process improvement. I am currently a part-time student studying web development and am excited to make connections while embarking on my newest professional journey.</p>
             
-            <p>In my personal time, I foster young and at-risk kittens, which has developed my sense of empathy and ability to relate to an individual on a personal level.</p>
-        </div>
-    </div>
+            <p>In my personal time, I foster young and at-risk kittens, which has developed my sense
 
-</body>
-</html>
