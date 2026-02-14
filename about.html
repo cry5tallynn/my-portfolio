@@ -1,8 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Me</title>
+    <meta charset="UTF-8">
+    <title>About Me | Crystal L Voss</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* This centers the content and limits the text width */
+        .about-content {
+            max-width: 700px; /* Limits the horizontal stretch */
+            margin: 0 auto;   /* Centers the block */
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeIn 1.5s ease-in-out; /* Subtle entry animation */
+        }
+
+        /* Subtle Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Dynamic Image Hover */
+        .profile-img {
+            width: 200px; 
+            border-radius: 15px; 
+            margin-bottom: 20px;
+            transition: transform 0.3s ease; /* Smooth movement */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05); /* Subtle grow effect */
+        }
+
+        /* Nav styling for clarity */
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,11 +52,17 @@
             <a href="contact.html">Contact</a>
         </nav>
 
-        <h1>About Me</h1>
-        <img src="profile.jpg" alt="Profile Picture" style="width: 200px; border-radius: 10px; margin-bottom: 20px;">
-        <p>I am a resourceful and results-driven Administrative Professional with over 10 years of experience supporting senior-level
-executives and managing office operations across diverse industries. Expertise in human resources, payroll, event
-coordination, and process improvement. I am currently a part-time student studying web development and am excited to make connections while embarking on my newest professional journey. In my personal time, I foster young and at-risk kittens, which has developed my sense of empathy and ability to relate to an individual on a personal level.</p>
+        <div class="about-content">
+            <h1>About Me</h1>
+            
+            <img src="profile.jpg" alt="Crystal L Voss" class="profile-img">
+
+            <p>I am a resourceful and results-driven Administrative Professional with over 10 years of experience supporting senior-level executives and managing office operations across diverse industries.</p>
+            
+            <p>Expertise in human resources, payroll, event coordination, and process improvement. I am currently a part-time student studying web development and am excited to make connections while embarking on my newest professional journey.</p>
+            
+            <p>In my personal time, I foster young and at-risk kittens, which has developed my sense of empathy and ability to relate to an individual on a personal level.</p>
+        </div>
     </div>
 
 </body>
